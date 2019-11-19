@@ -14,11 +14,11 @@ bouton.addEventListener("click", () => {
 
 multiplicateur.addEventListener("click", event => {
   if (score >= coutMultiplicateur) {
+    nbMultiplicateur += 1;
+    multipli = multipli * 2;
     score = score - coutMultiplicateur;
     affichage.textContent = score;
-    multipli = multipli * 2;
-    nbMultiplicateur += 1;
-    coutMultiplicateur *= nbMultiplicateur;
+    coutMultiplicateur = coutMultiplicateur * multipli;
     event.target.textContent =
       "multiplicateur: " + multipli + " cout: " + coutMultiplicateur;
   }
