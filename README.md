@@ -19,8 +19,8 @@ Le Projet consiste en .....
 
 ## Contributeurs
 
-- [**Alessandro Denys**](https://github.com/alessdenys)
 - [**Quentin De Paola**](https://github.com/quendepa)
+- [**Alessandro Denys**](https://github.com/alessdenys)
 - [**Gaudeline Durieux**](https://github.com/Gaudeline)
 - [**Térence Hecq**](https://github.com/terencehecq)
 - [**Kevin Labtani**](https://github.com/kevin-labtani)
