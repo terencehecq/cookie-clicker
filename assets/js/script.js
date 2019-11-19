@@ -1,13 +1,19 @@
 let bouton = document.getElementById("click");
 let affichage= document.getElementById("affichage");
+let multiplicateur= document.getElementById("multiplicateur");
 let compteur= 1;//valeur par click
 let score= 0;//argent
-let multiplicateur = 1;
+let multipli = 1;
 
 
 bouton.addEventListener("click", () => {
-    score+= compteur * multiplicateur;
+    score+= compteur * multipli;
     affichage.textContent= score;
 
-multiplicateur= multiplicateur*multiplicateur
+
+});
+
+multiplicateur.addEventListener("click", () => {
+    multipli= multipli*2;
+
 });

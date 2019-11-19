@@ -1,0 +1,53 @@
+Étape 1 : structure de base
+Ecrire la structure de base du projet en *HTML*, *CSS* et *Javascript*.
+Dans le HTML, mettre un bouton _click_ qui incrémente un compteur et un label
+initialisé à _0_ pour afficher ledit compteur.
+
+Étape 2 : préparer le Javascript
+Dans votre Javascript préparer des variables pour vous permettre de contrôler votre bouton et
+label. Vous aurez également besoin d’une variable pour suivre le score.
+
+Étape 3 : augmenter la note
+Lorsque vous cliquez sur le bouton, augmentez la variable stockant le score de _1_, puis
+afficher le score actuel à l’intérieur de l’étiquette.
+
+Étape 4 : faire un multiplicateur
+Ajouter un autre bouton qui agira comme un multiplicateur. Lorsqu’appelé ce bouton sera
+multiplier en permanence le nombre de points par clic, par _two_ par exemple.
+
+Étape 5 : prix du multiplicateur
+Le multiplicateur vous permet d’avoir un gros score rapidement, qui ne devrait pas être libre,
+il devrait s’agir d’un achat effectué avec le score du joueur actuel.
+
+Étape 6 : pas de crédit
+Vous ne pouvez pas faire de crédit, ce qui signifie que le joueur ne peut pas avoir un score négatif.
+Pensez à mettre à jour l’affichage du score après un achat.
+
+Étape 7 : affichage du compteur multiplicateur
+Afficher le compteur dans le multiplicateur. Par exemple, si le compteur vaut
+_5_, puis le bouton devrait afficher quelque chose comme _multiplier x5_.
+
+Étape 8 : augmenter le coût
+Acheter beaucoup de multiplicateur est beaucoup trop facile. Pour plus de plaisir, faire en sorte que chaque
+lorsqu’un multiplicateur est acheté, le coût d’achat d’un nouveau multiplicateur est augmenté.
+
+Étape 9 : afficher le coût
+Dans le texte du bouton multiplicateur, vous devriez également avoir le prix de la
+mise à niveau.
+
+Etape 10 : auto-clicker
+Mettre en œuvre une nouvelle amélioration à acheter, le _auto-click_. Comme le nom pourrait suggérer
+ce bonus ajoute automatiquement un clic à votre score chaque _x_ secondes.
+
+Étape 11 : prime
+Mettre en œuvre une autre amélioration à acheter, le _bonus_. Il devrait accorder le
+joueur un coup de pouce dans le score de _200%_ par clic pour _30 seconds_. Lorsque acheté le
+le joueur devrait voir une minuterie avec le temps restant à l’intérieur du bouton bonus.
+
+Étape 12 : désactiver les boutons
+Faire en sorte que, si le joueur n’a pas les points pour acheter un multiplicateur,
+un clic automatique ou un autre bonus, il ne peut pas.
+
+Étape 13 : Rendez-la jolie
+Votre cookie clicker doit être joli, le faire bien paraître avec CSS ou un peu plus
+Javascript.
