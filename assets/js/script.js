@@ -23,3 +23,18 @@ multiplicateur.addEventListener("click", event => {
       "multiplicateur: " + multipli + " cout: " + coutMultiplicateur;
   }
 });
+
+autoClicker.addEventListener("click", function autoClick(){
+  let interval = setInterval(() => {
+      score+= compteur * multipli;
+      affichage.textContent= score;
+  }, autoTime);
+  autoClicker.removeEventListener("click",autoClick)
+  autoClicker.addEventListener("click", function lowerAutoTime(){
+      autoTime = autoTime*0.9 ; 
+      console.log(autoTime);
+      clearInterval(interval);
+      autoClick();
+      autoClicker.removeEventListener("click", lowerAutoTime)
+  })
+});
