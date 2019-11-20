@@ -15,7 +15,11 @@ Le projet est accessible sur sa propre [GitHub page](------)
 
 ### **[Cookie Clicker](https://github.com/terencehecq/cookie-clicker)**
 
-Le Projet consiste en .....
+Le Projet consiste en une implémentation basique du jeu **Cookie Clicker** en JavaScript avec la possibilité d'acheter les trois modificateurs suivants:
+
+- un multiplicateur qui augmente la valeur de chaque click
+- un auto-clicker qui incremente automatiquement le score à la place de l'utilisateur
+- un bonus qui _boost_ le score de 200% par click pour 30 secondes.
 
 ## Contributeurs
 
