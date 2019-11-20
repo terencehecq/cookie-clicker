@@ -3,6 +3,13 @@ let affichage = document.getElementById("affichage");
 let multiplicateur = document.getElementById("multiplicateur");
 let autoClicker = document.getElementById("autoClicker");
 let bonus = document.getElementById("bonus");
+let coutMultiplicateurHTML = document.getElementById("coutMultiplicateur");
+let nbMultiplicateurHTML = document.getElementById("nbMultiplicateur");
+let coutAutoClickerHTML = document.getElementById("coutAutoClicker");
+let nbAutoClickerHTML = document.getElementById("nbAutoClicker");
+let bonusHTML = document.getElementById("bonusText");
+
+
 let compteur = 1; //valeur par click
 let score = 0; //argent
 let multipli = 1;
@@ -12,6 +19,12 @@ let nbAutoClicker = 0;
 let coutAutoClicker = 25;
 let coutBonus = 300;
 let runningChrono = false;
+
+coutMultiplicateurHTML.textContent = coutMultiplicateur;
+nbMultiplicateurHTML.textContent = multipli;
+coutAutoClickerHTML.textContent = coutAutoClicker;
+nbAutoClickerHTML.textContent = nbAutoClicker;
+bonusHTML.textContent = `Prix: ${coutBonus}`;
 
 bouton.addEventListener("click", () => {
   score += compteur * multipli;
@@ -25,8 +38,8 @@ multiplicateur.addEventListener("click", event => {
     score = score - coutMultiplicateur;
     affichage.textContent = score;
     coutMultiplicateur = coutMultiplicateur * multipli;
-    event.target.textContent =
-      "multiplicateur: " + multipli + " cout: " + coutMultiplicateur;
+    coutMultiplicateurHTML.textContent = coutMultiplicateur
+    nbMultiplicateurHTML.textContent = multipli;
   }
 });
 
@@ -39,7 +52,8 @@ autoClicker.addEventListener("click", function autoClick(){
     affichage.textContent = score;
     nbAutoClicker += 1;
     coutAutoClicker *= nbAutoClicker;
-    autoClicker.textContent = `${nbAutoClicker} Auto-clicker / price : ${coutAutoClicker}`;
+    nbAutoClickerHTML.textContent = nbAutoClicker;
+    coutAutoClickerHTML.textContent = coutAutoClicker;
 
     setInterval(() => {
       score += compteur * multipli;
@@ -70,11 +84,11 @@ bonus.addEventListener("click", function bonusX2(){
 
       timeLeft = Math.round(30 - chrono/1000)
     
-      bonus.textContent = `Bonus - remaining time : ${timeLeft}`
+      bonusHTML.textContent = `Temps restant : ${timeLeft}`
 
       if (timeLeft == 0){
         clearInterval(decompte)
-        bonus.textContent = `Bonus - price : ${coutBonus}`;
+        bonusHTML.textContent = `Prix : ${coutBonus}`;
         runningChrono = false;
         compteur /= 2;
         bonus.addEventListener("click", bonusX2)
