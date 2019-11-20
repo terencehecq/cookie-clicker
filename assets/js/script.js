@@ -7,9 +7,8 @@ let score = 0; //argent
 let multipli = 1;
 let nbMultiplicateur = 0;
 let coutMultiplicateur = 10;
-let autoTime = 10000;
-let nbAutoClick = 0;
-let coutAutoClick = 50;
+let nbAutoClicker = 0;
+let coutAutoClicker = 25;
 
 bouton.addEventListener("click", () => {
   score += compteur * multipli;
@@ -28,26 +27,17 @@ multiplicateur.addEventListener("click", event => {
   }
 });
 
-autoClicker.addEventListener("click", function autoClick(e){
-  if (score >= coutAutoClick) {
-    score = score - coutAutoClick;
+autoClicker.addEventListener("click", function autoClick(){
+  if (score >= coutAutoClicker) {
+    score = score - coutAutoClicker;
     affichage.textContent = score;
-    nbAutoClick += 1;
-    coutAutoClick *= nbAutoClick;
-    autoClicker.textContent = `Auto-click++ / price : ${coutAutoClick}`
+    nbAutoClicker += 1;
+    coutAutoClicker *= nbAutoClicker;
+    autoClicker.textContent = `+1 Auto-clicker / price : ${coutAutoClicker}`
 
-    let interval = setInterval(() => {
+    setInterval(() => {
         score+= compteur * multipli;
         affichage.textContent= score;
-    }, autoTime);
-
-    autoClicker.removeEventListener("click",autoClick)
-    autoClicker.addEventListener("click", function lowerAutoTime(){
-        autoTime = autoTime*0.9 ; 
-        console.log(autoTime);
-        clearInterval(interval);
-        autoClick();
-        autoClicker.removeEventListener("click", lowerAutoTime)
-    })
+    }, 2000);
   }
 });
