@@ -27,17 +27,17 @@ multiplicateur.addEventListener("click", event => {
   }
 });
 
-autoClicker.addEventListener("click", function autoClick(){
+autoClicker.addEventListener("click", function autoClick() {
   if (score >= coutAutoClicker) {
     score = score - coutAutoClicker;
     affichage.textContent = score;
     nbAutoClicker += 1;
     coutAutoClicker *= nbAutoClicker;
-    autoClicker.textContent = `+1 Auto-clicker / price : ${coutAutoClicker}`
+    autoClicker.textContent = `${nbAutoClicker} Auto-clicker / price : ${coutAutoClicker}`;
 
     setInterval(() => {
-        score+= compteur * multipli;
-        affichage.textContent= score;
+      score += compteur * multipli;
+      affichage.textContent = score;
     }, 2000);
   }
 });
