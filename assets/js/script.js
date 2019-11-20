@@ -12,7 +12,7 @@ let coutAutoClicker = 25;
 
 bouton.addEventListener("click", () => {
   score += compteur * multipli;
-  affichage.textContent = score;
+  affichage.textContent = score.toLocaleString("fr-FR");
 });
 
 multiplicateur.addEventListener("click", event => {
@@ -20,24 +20,29 @@ multiplicateur.addEventListener("click", event => {
     nbMultiplicateur += 1;
     multipli = multipli * 2;
     score = score - coutMultiplicateur;
-    affichage.textContent = score;
+    affichage.textContent = score.toLocaleString("fr-FR");
     coutMultiplicateur = coutMultiplicateur * multipli;
     event.target.textContent =
-      "multiplicateur: " + multipli + " cout: " + coutMultiplicateur;
+      "multiplicateur: " +
+      multipli +
+      " cout: " +
+      coutMultiplicateur.toLocaleString("fr-FR");
   }
 });
 
 autoClicker.addEventListener("click", function autoClick() {
   if (score >= coutAutoClicker) {
     score = score - coutAutoClicker;
-    affichage.textContent = score;
+    affichage.textContent = score.toLocaleString("fr-FR");
     nbAutoClicker += 1;
     coutAutoClicker *= nbAutoClicker;
-    autoClicker.textContent = `${nbAutoClicker} Auto-clicker / price : ${coutAutoClicker}`;
+    autoClicker.textContent = `${nbAutoClicker} Auto-clicker / price : ${coutAutoClicker.toLocaleString(
+      "fr-FR"
+    )}`;
 
     setInterval(() => {
       score += compteur * multipli;
-      affichage.textContent = score;
+      affichage.textContent = score.toLocaleString("fr-FR");
     }, 2000);
   }
 });
