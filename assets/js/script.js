@@ -80,7 +80,7 @@ bonus.addEventListener("click", function bonusX2(){
     bonus.removeEventListener("click", bonusX2);
     score = score - coutBonus;
     affichage.textContent = score;
-    coutBonus *= 1.5;
+    coutBonus = parseInt(coutBonus * 1.5);
     coutBonusHTML.textContent = coutBonus;
     let chronoStart = Date.now() 
     let timeLeft;
@@ -114,7 +114,7 @@ function getRandomInt(max) {
 
 avalanche.addEventListener("click", () => {
   if (score >= coutAvalanche) {
-  let bonus2 = (getRandomInt(10)+1)*(score/8);
+  let bonus2 = parseInt((getRandomInt(10)+1)*(score/8));
   score = score-coutAvalanche;
   alert("vous avez gagner : " +bonus2+ " flocons")
   score= score+bonus2;
