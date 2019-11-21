@@ -3,12 +3,12 @@
 ![Aperçu du projet - capture d’écran](assets/Image/capture.png)
 
 ## Présentation du Projet
-
+git 
 Projet créé le 19 Novembre 2019 dans le cadre de la formation Web Developer donnée par [BeCode](https://www.becode.org/), dans le but d'améliorer nos compétences en JavaScript, en HTML et CSS, en git et en gestion d'équipe.
 
 Le projet est réalisé sur base des [instructions données](https://github.com/becodeorg/CRL-Woods-2.15/tree/master/Parcours/02-Colline/11-Javascript/4.cookie_clicker).
 
-Le projet est accessible sur sa propre [GitHub page](------)
+Le projet est accessible sur sa propre [GitHub page](https://terencehecq.github.io/cookie-clicker/)
 
 ### **[Cookie Clicker](https://github.com/terencehecq/cookie-clicker)**
 
