@@ -56,14 +56,28 @@ button:disabled{
 
 
 
-
+.img-avalanche{
+    width:50px;
+}
 
 .btnBckg{
     background-color: rgba(49,140,231,0.5);
     width: 10vw;
 }
 
+.flocon{
+    width:100px;
+    position:relative;
+    margin-top:-50px;
+    animation-name: mouve2;
+    animation-duration: 3s;
+    animation-delay: 0s;
+}
 
+@-webkit-keyframes mouve2 {
+    0%   { left:0px; top:-30px;}
+    100% { left:0px; top:-300px;}
+  }
 
  
 

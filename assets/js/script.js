@@ -113,7 +113,7 @@ avalanche.addEventListener("click", () => {
   if (score >= coutAvalanche) {
   let bonus2 = (getRandomInt(10)+1)*(score/8);
   score = score-coutAvalanche;
-  console.log(bonus2)
+  alert("vous avez gagner : " +bonus2+ " flocons")
   score= score+bonus2;
   affichage.textContent = score;
   coutAvalanche = coutAvalanche*(getRandomInt(2)+1);
