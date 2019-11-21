@@ -7,6 +7,7 @@ let coutMultiplicateurHTML = document.getElementById("coutMultiplicateur");
 let nbMultiplicateurHTML = document.getElementById("nbMultiplicateur");
 let coutAutoClickerHTML = document.getElementById("coutAutoClicker");
 let nbAutoClickerHTML = document.getElementById("nbAutoClicker");
+let coutBonusHTML = document.getElementById("coutBonus");
 let bonusHTML = document.getElementById("bonusText");
 let avalanche= document.getElementById("avalanche");
 let coutAvalancheHTML = document.getElementById("coutAvalanche")
@@ -26,7 +27,7 @@ coutMultiplicateurHTML.textContent = coutMultiplicateur;
 nbMultiplicateurHTML.textContent = multipli;
 coutAutoClickerHTML.textContent = coutAutoClicker;
 nbAutoClickerHTML.textContent = nbAutoClicker;
-bonusHTML.textContent = `Prix: ${coutBonus}`;
+coutBonusHTML.textContent = coutBonus;
 coutAvalancheHTML.textContent = coutAvalanche;
 
 
@@ -36,6 +37,7 @@ bouton.addEventListener("click", () => {
   affichage.textContent = score;
 
 });
+
  // ----- Multiplicateur ----- //
 multiplicateur.addEventListener("click", event => {
   if (score >= coutMultiplicateur) {
@@ -69,16 +71,17 @@ autoClicker.addEventListener("click", function autoClick(){
 });
 
 
-// ----- Bonus 30s ----- // 
+// ----- Bonus 200% - 30s ----- // 
 
 bonus.addEventListener("click", function bonusX2(){
 
   if (score >= coutBonus){
-    bonusHTML.textContent = `Bonus - remaining time : 30`;
+    bonusHTML.textContent = `30 s`;
     bonus.removeEventListener("click", bonusX2);
     score = score - coutBonus;
     affichage.textContent = score;
     coutBonus *= 1.5;
+    coutBonusHTML.textContent = coutBonus;
     let chronoStart = Date.now() 
     let timeLeft;
     compteur *= 2;
@@ -90,11 +93,10 @@ bonus.addEventListener("click", function bonusX2(){
 
       timeLeft = Math.round(30 - chrono/1000)
     
-      bonusHTML.textContent = `Temps restant : ${timeLeft}`
+      bonusHTML.textContent = `${timeLeft} s`
 
       if (timeLeft == 0){
         clearInterval(decompte)
-        bonusHTML.textContent = `Prix : ${coutBonus}`;
         runningChrono = false;
         compteur /= 2;
         bonus.addEventListener("click", bonusX2)
@@ -104,6 +106,7 @@ bonus.addEventListener("click", function bonusX2(){
   }
 });
 
+// ----- Avalanche ----- //
 
 function getRandomInt(max) {
   return Math.floor(Math.random() * Math.floor(max));
@@ -116,7 +119,7 @@ avalanche.addEventListener("click", () => {
   alert("vous avez gagner : " +bonus2+ " flocons")
   score= score+bonus2;
   affichage.textContent = score;
-  coutAvalanche = coutAvalanche*(getRandomInt(2)+1);
+  coutAvalanche = coutAvalanche*(getRandomInt(3)+1);
   coutAvalancheHTML.textContent = coutAvalanche;
   }
 });
@@ -128,29 +131,37 @@ setInterval(()=>{
   // Multiplicateur
   if(score<coutMultiplicateur){
     multiplicateur.disabled = true;
+    multiplicateur.style.opacity = 0.6;
   }else{
     multiplicateur.disabled = false;
+    multiplicateur.style.opacity = 1;
   }
 
   // Auto clicker
   if (score<coutAutoClicker){
     autoClicker.disabled = true;
+    autoClicker.style.opacity = 0.6;
   }else{
     autoClicker.disabled = false
+    autoClicker.style.opacity = 1;
   }
 
   // Bonus
   if(score<coutBonus){
     bonus.disabled = true;
+    bonus.style.opacity = 0.6;
   }else if (score>=coutBonus && runningChrono == false){
     bonus.disabled = false;
+    bonus.style.opacity = 1;
   }
 
   // Avalanche
   if(score<coutAvalanche){
     avalanche.disabled = true;
+    avalanche.style.opacity = 0.6;
   }else{
     avalanche.disabled = false;
+    avalanche.style.opacity = 1;
   }
 },500)
 
