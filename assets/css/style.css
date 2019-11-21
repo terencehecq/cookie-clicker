@@ -26,11 +26,13 @@ section {
     text-align:center;
     font-size: 1.5rem;
     font-weight: bold;;
+    border-radius: 3px;
 }
 
 .étoile{
     display:block;
     width:20%;
+    max-width:300px;
     margin:auto;
     position: relative;
     animation-name: mouve;
@@ -54,7 +56,8 @@ section {
 
 .btns {
     width:70%;
-    margin: 10vh auto 0;
+    max-width:800px;
+    margin: 5vh auto 0;
     display:flex;
     justify-content: center;
     align-content: space-between;
