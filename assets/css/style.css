@@ -6,14 +6,16 @@ body {
 
 .score {
     margin-left: 760px;
-    border: 3px blue double;
+    padding-left: 1%;
+    border: 3px whitesmoke double;
     width: 250px;
     margin-top: -15px;
-    background-color: whitesmoke;
+    background-color: rgba(49,140,231,0.5);
+    color: whitesmoke;
 }
 
 .étoile{
-    margin-left: 600px;
+    margin-left: 33vw;
     position: relative;
     animation-name: mouve;
     animation-duration: 3s;
@@ -43,11 +45,23 @@ body {
 
 button{
     margin:0 10px;
+    color: whitesmoke;
+}
+
+button:disabled{
+    color:grey;
 }
 
 .flocon {
     width:100px;
     animation-name:mouve2;
+}
+
+
+
+.btnBckg{
+    background-color: rgba(49,140,231,0.5);
+    width: 10vw;
 }
 
 
