@@ -5,32 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="assets/css/style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/cf5b420eb5.js" crossorigin="anonymous"></script>
     <title>Noel streecker</title>
 </head>
 <body>
 
-    <img id="click" class="étoile" src="assets/Image/beau.png" alt="normalement c'est beau" style="width: 25vw;">
-    <div class="score" id="affichage">0</div>
-    <div class="btn">
-      <button class="btnBckg" id="multiplicateur">
-            <img class="imageBtn" src="assets/Image/chocolat.png" alt="boite de chocolats" style="width: 5vw;">
-            <p>Prix: <span id="coutMultiplicateur"></span> </p>
-            <p>Multiplicateur: x<span id="nbMultiplicateur"></span></p>
-        </button>
-        <button class="btnBckg" id="autoClicker">
-            <img class="imageBtn" src="assets/Image/cadeau.png" alt="cadeau" style="width: 5vw;">
-            <p>Prix: <span id="coutAutoClicker"></span></p>
-            <p>Nombre d'autoClicker <span id="nbAutoClicker"></span></p>
-        </button>
-        <button class="btnBckg" id="bonus">
-            <img class="imageBtn" src="assets/Image/rose-de-glace.png" alt="rose de glace" style="width: 5vw;margin-top: -2vh;">
-            <p id="bonusText"></p>
-        </button> 
-        <button id="avalanche"> 
-            <img src="assets/Image/avalanche2.png" alt="bonus avalanche" style="width: 10vw;height: 18vh;margin-top: -2vh;">
-            <p>Prix: <span id="coutAvalanche"></span> </p> 
-        </button>       
-    </div>
+    <section>
+        <img id="click" class="étoile" src="assets/Image/beau.png" alt="normalement c'est beau"">
+        <div class="score"><span id="affichage">0</span>  <i class="far fa-snowflake"></i></div>
+        <div class="btns">
+          <button id="multiplicateur">
+              <h3>Multiplicateur</h3>
+                <img class="imageBtn" src="assets/Image/chocolat.png" alt="boite de chocolats">
+                <p>Prix: <span id="coutMultiplicateur"></span> <i class="far fa-snowflake"></i></p>
+                <p>x<span id="nbMultiplicateur"></span></p>
+            </button>
+            <button id="autoClicker">
+              <h3>Auto-clicker</h3>
+                <img class="imageBtn" src="assets/Image/cadeau.png" alt="cadeau">
+                <p>Prix: <span id="coutAutoClicker"></span> <i class="far fa-snowflake"></i></p>
+                <p><span id="nbAutoClicker"></span></p>
+            </button>
+            <button id="bonus">
+              <h3>Bonus 200%</h3>
+                <img class="imageBtn" src="assets/Image/rose-de-glace.png" alt="rose de glace">
+                <p>Prix: <span id="coutBonus"></span> <i class="far fa-snowflake"></i></p>
+                <p id="bonusText"></p>
+            </button> 
+            <button id="avalanche"> 
+              <h3>Avalanche</h3>
+                <img src="assets/Image/avalanche2.png" alt="bonus avalanche">
+                <p>Prix: <span id="coutAvalanche"></span> <i class="far fa-snowflake"></i></p> 
+            </button>       
+        </div>
+    </section>
     <script src="assets/js/script.js"></script>
 </body>
 </html>
