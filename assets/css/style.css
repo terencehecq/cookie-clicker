@@ -1,13 +1,75 @@
 body {
-    background-image: url("../Image/santa.png");
+    
+    background-size: 100%;
+    background-image: url("../Image/3qjr.gif");
+}
+
+.score {
+    margin-left: 760px;
+    padding-left: 1%;
+    border: 3px whitesmoke double;
+    width: 250px;
+    margin-top: -15px;
+    background-color: rgba(49,140,231,0.5);
+    color: whitesmoke;
+}
+
+.étoile{
+    margin-left: 33vw;
+    position: relative;
+    animation-name: mouve;
+    animation-duration: 3s;
+    animation-delay: 0s;
+
+}
+
+@-webkit-keyframes mouve {
+    0%   { left:0px; top:-600px;}
+    100% { left:0px; top:0px;}
+  }
+
+.étoile:active
+{
+   transform: scale(1.3);
+   transition: 0.08s;
+}
+
+
+
+
+.btn {
+    width:43%;
+    margin-top: -30px;
+    margin: auto;
+    align-content: space-between;
+    display:flex;
+}
+
+button{
+    margin:0 10px;
+    color: whitesmoke;
+}
+
+button:disabled{
+    color:grey;
 }
 
 
 
 
 
+.btnBckg{
+    background-color: rgba(49,140,231,0.5);
+    width: 10vw;
+}
+
+
+
+ 
+
+
 /* margin:0;
     padding:0;
     background: url(/home/gaudeline/Images/christmas-streeker/santa.png) no-repeat center fixed;
     -webkit-background-size: cover; /* pour anciens Chrome et Safari */
-    background-size: cover; version standardisée */
+    /*background-size: cover; version standardisée */

@@ -8,7 +8,8 @@ let nbMultiplicateurHTML = document.getElementById("nbMultiplicateur");
 let coutAutoClickerHTML = document.getElementById("coutAutoClicker");
 let nbAutoClickerHTML = document.getElementById("nbAutoClicker");
 let bonusHTML = document.getElementById("bonusText");
-
+let avalanche= document.getElementById("avalanche");
+let coutAvalancheHTML = document.getElementById("coutAvalanche")
 
 let compteur = 1; //valeur par click
 let score = 0; //argent
@@ -18,6 +19,7 @@ let coutMultiplicateur = 10;
 let nbAutoClicker = 0;
 let coutAutoClicker = 25;
 let coutBonus = 300;
+let coutAvalanche = 500;
 let runningChrono = false;
 
 coutMultiplicateurHTML.textContent = coutMultiplicateur;
@@ -25,12 +27,16 @@ nbMultiplicateurHTML.textContent = multipli;
 coutAutoClickerHTML.textContent = coutAutoClicker;
 nbAutoClickerHTML.textContent = nbAutoClicker;
 bonusHTML.textContent = `Prix: ${coutBonus}`;
+coutAvalancheHTML.textContent = coutAvalanche;
 
+
+// ----- Clicker ----- //
 bouton.addEventListener("click", () => {
   score += compteur * multipli;
   affichage.textContent = score;
-});
 
+});
+ // ----- Multiplicateur ----- //
 multiplicateur.addEventListener("click", event => {
   if (score >= coutMultiplicateur) {
     nbMultiplicateur += 1;
@@ -98,6 +104,23 @@ bonus.addEventListener("click", function bonusX2(){
   }
 });
 
+
+function getRandomInt(max) {
+  return Math.floor(Math.random() * Math.floor(max));
+}
+
+avalanche.addEventListener("click", () => {
+  if (score >= coutAvalanche) {
+  let bonus2 = (getRandomInt(10)+1)*(score/8);
+  score = score-coutAvalanche;
+  console.log(bonus2)
+  score= score+bonus2;
+  affichage.textContent = score;
+  coutAvalanche = coutAvalanche*(getRandomInt(2)+1);
+  coutAvalancheHTML.textContent = coutAvalanche;
+  }
+});
+
 // ----- Check score to disable buttons ----- // 
 
 setInterval(()=>{
@@ -122,4 +145,12 @@ setInterval(()=>{
   }else if (score>=coutBonus && runningChrono == false){
     bonus.disabled = false;
   }
+
+  // Avalanche
+  if(score<coutAvalanche){
+    avalanche.disabled = true;
+  }else{
+    avalanche.disabled = false;
+  }
 },500)
+
