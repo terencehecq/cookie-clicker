@@ -68,7 +68,7 @@ autoClicker.addEventListener("click", function autoClick(){
 bonus.addEventListener("click", function bonusX2(){
 
   if (score >= coutBonus){
-    bonus.textContent = `Bonus - remaining time : 30`;
+    bonusHTML.textContent = `Temps restant : 30`;
     bonus.removeEventListener("click", bonusX2);
     score = score - coutBonus;
     affichage.textContent = score;
