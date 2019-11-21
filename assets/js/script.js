@@ -8,7 +8,7 @@ let nbMultiplicateurHTML = document.getElementById("nbMultiplicateur");
 let coutAutoClickerHTML = document.getElementById("coutAutoClicker");
 let nbAutoClickerHTML = document.getElementById("nbAutoClicker");
 let bonusHTML = document.getElementById("bonusText");
-
+let flocon= document.getElementById("bon");
 
 let compteur = 1; //valeur par click
 let score = 0; //argent
