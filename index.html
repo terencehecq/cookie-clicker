@@ -1,16 +1,33 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
-  </head>
-  <body>
-    <button id="click">click</button>
-    <button id="multiplicateur">multiplicateur / cost 10</button>
-    <button id="autoClicker">Auto-clicker / price : 25</button>
-    <div id="affichage"></div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>Noel streecker</title>
+</head>
+<body>
+   
+    <img id="click" class="étoile" src="assets/Image/beau.png" alt="normalement c'est beau" style="width: 30vw;">
+    <div class="score" id="affichage">0</div>
+    <img id="flocon" class="flocon" src="assets/Image/Flocon2.png">+1</img>
+    <div class="btn">
+      <button id="multiplicateur">
+            <img src="assets/Image/chocolat.png" alt="boite de chocolats" style="width: 10vw;height: 18vh;">
+            <p>Prix: <span id="coutMultiplicateur"></span> </p> 
+            <p>Multiplicateur: x<span id="nbMultiplicateur"></span></p>
+        </button>
+        <button id="autoClicker"> 
+            <img src="assets/Image/cadeau.png" alt="cadeau" style="width: 10vw;height: 18vh;">
+            <p>Prix: <span id="coutAutoClicker"></span></p>
+            <p>Nombre d'autoClicker <span id="nbAutoClicker"></span></p>
+        </button>    
+        <button id="bonus"> 
+            <img src="assets/Image/rose-de-glace.png" alt="rose de glace" style="width: 10vw;height: 18vh;margin-top: -2vh;">
+            <p id="bonusText"></p>
+        </button>    
+    </div>
     <script src="assets/js/script.js"></script>
-  </body>
+</body>
 </html>
