@@ -38,7 +38,7 @@ section {
 
 }
 
-@-webkit-keyframes mouve {
+@keyframes mouve {
     0%   { left:0px; top:-600px;}
     100% { left:0px; top:0px;}
   }
